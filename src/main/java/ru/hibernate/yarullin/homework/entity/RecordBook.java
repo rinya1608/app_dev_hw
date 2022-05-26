@@ -35,4 +35,12 @@ public class RecordBook {
     public void setCode(Integer code) {
         this.code = code;
     }
+
+    @Override
+    public String toString() {
+        return "RecordBook{" +
+                "id=" + id +
+                ", code=" + code +
+                '}';
+    }
 }

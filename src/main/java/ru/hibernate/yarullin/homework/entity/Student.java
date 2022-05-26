@@ -10,6 +10,9 @@ public class Student {
     private RecordBook recordBook;
     private Person person;
 
+    public Student() {
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     public Long getId() {
@@ -46,5 +49,15 @@ public class Student {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", group='" + group + '\'' +
+                ", recordBook=" + recordBook +
+                ", person=" + person +
+                '}';
     }
 }

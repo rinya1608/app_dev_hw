@@ -77,4 +77,16 @@ public class Person {
     public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", passportSeries=" + passportSeries +
+                ", passportNumber=" + passportNumber +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                '}';
+    }
 }
