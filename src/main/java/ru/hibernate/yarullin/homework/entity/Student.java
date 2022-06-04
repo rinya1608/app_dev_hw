@@ -1,7 +1,9 @@
 package ru.hibernate.yarullin.homework.entity;
 
 import jakarta.persistence.*;
+import ru.hibernate.yarullin.homework.entity.listeners.AuditStudentListener;
 
+@EntityListeners(AuditStudentListener.class)
 @Entity
 @Table(name = "student")
 public class Student {

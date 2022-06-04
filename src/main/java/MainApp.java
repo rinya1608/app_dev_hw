@@ -66,6 +66,12 @@ public class MainApp {
         System.out.println("------------5.5 Criteria------------");
         studentDAO.findByRecordBookNotNullWithCriteria().forEach(System.out::println);
 
+        entityManager.getTransaction().begin();
+        System.out.println("------------5.6 Remove students------------");
+        studentDAO.findAll().forEach(studentDAO::delete);
+
+        entityManager.getTransaction().commit();
+
         entityManager.close();
     }
 }
